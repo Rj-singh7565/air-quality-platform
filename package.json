@@ -4,13 +4,13 @@
   "description": "AI-Driven Hyperlocal Air Quality Monitoring and Citizen Accountability Platform",
   "private": true,
   "scripts": {
-    "server": "node server/server.js",
-    "server:dev": "nodemon server/server.js",
+    "server": "python server/server.py",
+    "server:dev": "python server/server.py",
     "client": "cd client && npm run dev",
     "client:build": "cd client && npm run build",
     "install:all": "npm install && cd client && npm install",
     "dev": "concurrently \"npm run server:dev\" \"npm run client\"",
-    "db:init": "node server/config/initDb.js"
+    "db:init": "python server/config/init_db.py"
   },
   "dependencies": {
     "axios": "^1.6.7",
